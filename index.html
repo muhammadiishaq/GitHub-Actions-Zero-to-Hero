@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Ishaq | DevOps Portfolio</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Floating background blobs */
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: rgba(0, 255, 255, 0.2);
+    border-radius: 50%;
+    filter: blur(150px);
+    z-index: -1;
+}
+
+body::before {
+    top: -100px;
+    left: -100px;
+}
+
+body::after {
+    bottom: -150px;
+    right: -100px;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.05);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    z-index: 1000;
+}
+
+nav h2 {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00f5ff;
+}
+
+/* Sections */
+section {
+    min-height: 100vh;
+    padding: 120px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Glass Card */
+.glass {
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    transition: 0.4s ease;
+}
+
+.glass:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,255,255,0.3);
+}
+
+/* Hero */
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero span {
+    color: #00f5ff;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.btn {
+    margin-top: 25px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(45deg,#00f5ff,#00c3ff);
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,255,255,0.5);
+}
+
+/* Skills */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.skill {
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.06);
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: rgba(0,255,255,0.15);
+    transform: translateY(-8px);
+}
+
+/* Projects */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.07);
+    transition: 0.4s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    background: rgba(0,255,255,0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Muhammad Ishaq</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="glass">
+        <h1>Hi, I'm <span>Muhammad Ishaq</span></h1>
+        <p>DevOps Learner | Docker & Git Enthusiast | Building Real-World Skills Every Day</p>
+        <button class="btn" onclick="document.getElementById('contact').scrollIntoView()">Connect With Me</button>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="glass">
+        <h2>About Me</h2>
+        <p style="margin-top:20px; line-height:1.7;">
+            I'm Muhammad Ishaq, a passionate DevOps learner currently focused on mastering 
+            Linux, Git, Docker, Networking, and real-world infrastructure workflows. 
+            I believe in learning by building — completing daily hands-on tasks and sharing 
+            progress publicly.
+            <br><br>
+            My journey includes working with Docker containers, Docker Compose, networking concepts, 
+            image lifecycle management, and Git workflows like merge & rebase. 
+            I'm continuously improving step by step toward becoming a professional DevOps Engineer.
+        </p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <div class="glass">
+        <h2>Skills & Tools</h2>
+        <div class="skills-container">
+            <div class="skill">🐳 Docker & Docker Compose</div>
+            <div class="skill">🌐 Networking Fundamentals</div>
+            <div class="skill">🔧 Linux & Shell Scripting</div>
+            <div class="skill">🔀 Git & GitHub</div>
+            <div class="skill">⚙️ CI/CD Basics</div>
+            <div class="skill">📦 Container Lifecycle</div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="glass">
+        <h2>Recent Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Docker Multi-Container Setup</h3>
+                <p>Built multi-container applications using Docker Compose with networking and volumes.</p>
+            </div>
+            <div class="project-card">
+                <h3>Custom Docker Images</h3>
+                <p>Created optimized Dockerfiles with proper layering and caching strategy.</p>
+            </div>
+            <div class="project-card">
+                <h3>Networking Troubleshooting Lab</h3>
+                <p>Practiced OSI/TCP-IP mapping and real connectivity checks using CLI tools.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="glass">
+        <h2>Let's Connect</h2>
+        <p style="margin-top:20px;">
+            I'm open to collaboration, learning opportunities, and DevOps discussions.
+        </p>
+        <button class="btn" style="margin-top:20px;">Email Me</button>
+    </div>
+</section>
+
+<footer>
+    © 2026 Muhammad Ishaq | DevOps Journey 🚀
+</footer>
+
+</body>
+</html>
