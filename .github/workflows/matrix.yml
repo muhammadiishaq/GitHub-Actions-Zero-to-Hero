@@ -28,4 +28,4 @@ jobs:
           python-version: ${{ matrix.python-version }}
       
       - name: Print Python Version
-        run: python --version
+        run: python ------version
